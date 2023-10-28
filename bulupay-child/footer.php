@@ -57,7 +57,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i> <?php echo get_theme_mod( 'mj_bulupay_site_footer_website_title' ) ?>
           </h6>
           <p>
            <?php mj_bulupay_add_site_info() ?>

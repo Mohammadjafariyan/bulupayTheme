@@ -129,6 +129,33 @@ function mj_bulupay_customize_register( $wp_customize ) {
 			)
 		)
 	);
+
+
+	
+	$wp_customize->add_setting(
+		'mj_bulupay_site_footer_website_title',
+		array(
+			'default'           => 'bulupay',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+
+	
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'mj_bulupay_site_footer_website_title',
+			array(
+				'label'       => __( 'Site Footer Description', 'mj_bulupay' ),
+				'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'mj_bulupay' ),
+				'section'     => 'understrap_theme_layout_options',
+				'type'        => 'text',
+				'priority'    => 30,
+			)
+		)
+	);
  }
  add_action( 'customize_register', 'mj_bulupay_customize_register' );
 
