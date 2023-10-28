@@ -86,3 +86,68 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+add_action( 'after_setup_theme', 'mj_bulupay_after_theme_setup' );
+
+
+function mj_bulupay_after_theme_setup() {
+	register_nav_menus(
+		array(
+			'footer' => __( 'Footer Menu', 'mj_bulupay' ),
+			'footer-2' => __( 'Footer 2 Menu', 'mj_bulupay' ),
+		)
+	);
+}
+
+
+
+function mj_bulupay_customize_register( $wp_customize ) {
+	//All our sections, settings, and controls will be added here
+
+	$wp_customize->add_setting(
+		'mj_bulupay_site_footer_description',
+		array(
+			'default'           => 'Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.			',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+
+	
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'mj_bulupay_site_footer_description',
+			array(
+				'label'       => __( 'Site Footer Description', 'mj_bulupay' ),
+				'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'mj_bulupay' ),
+				'section'     => 'understrap_theme_layout_options',
+				'type'        => 'textarea',
+				'priority'    => 30,
+			)
+		)
+	);
+ }
+ add_action( 'customize_register', 'mj_bulupay_customize_register' );
+
+
+
+
+
+
+if ( ! function_exists( 'mj_bulupay_add_site_info' ) ) {
+	/**
+	 * Add site info content.
+	 */
+	function mj_bulupay_add_site_info() {
+		$the_theme = wp_get_theme();
+
+		$site_info = get_theme_mod( 'mj_bulupay_site_footer_description' );
+
+	
+		echo $site_info; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	}
+}
