@@ -156,7 +156,147 @@ function mj_bulupay_customize_register( $wp_customize ) {
 			)
 		)
 	);
+	$wp_customize->add_setting(
+		'mj_bulupay_site_footer_address',
+		array(
+			'default'           => 'Tabriz Nesfe Rah',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'mj_bulupay_site_footer_address',
+			array(
+				'label'       => __( 'Site Footer Address', 'mj_bulupay' ),
+				'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'mj_bulupay' ),
+				'section'     => 'understrap_theme_layout_options',
+				'type'        => 'textarea',
+				'priority'    => 30,
+			)
+		)
+	);
+    //---------------------------------------------------------------------------------
+    $wp_customize->add_setting(
+		'mj_bulupay_site_footer_tel1',
+		array(
+			'default'           => '+ 98 901 040 9293',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'mj_bulupay_site_footer_tel1',
+			array(
+				'label'       => __( 'Site Footer Telephone 1 ', 'mj_bulupay' ),
+				'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'mj_bulupay' ),
+				'section'     => 'understrap_theme_layout_options',
+				'type'        => 'text',
+				'priority'    => 30,
+			)
+		)
+	);
+
+    //---------------------------------------------------------------------------------
+    $wp_customize->add_setting(
+		'mj_bulupay_site_footer_tel2',
+		array(
+			'default'           => '+ 98 914 898 0692',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'mj_bulupay_site_footer_tel2',
+			array(
+				'label'       => __( 'Site Footer Telephone 2 ', 'mj_bulupay' ),
+				'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'mj_bulupay' ),
+				'section'     => 'understrap_theme_layout_options',
+				'type'        => 'text',
+				'priority'    => 30,
+			)
+		)
+	);
+    //---------------------------------------------------------------------------------
+    $wp_customize->add_setting(
+		'mj_bulupay_site_footer_email',
+		array(
+			'default'           => 'admin@contact.com',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		)
+	);
+
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'mj_bulupay_site_footer_email',
+			array(
+				'label'       => __( 'Site Footer Email ', 'mj_bulupay' ),
+				'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'mj_bulupay' ),
+				'section'     => 'understrap_theme_layout_options',
+				'type'        => 'email',
+				'priority'    => 30,
+			)
+		)
+	);
+
+
+    $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_github','github','text','#');
+    $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_linkedin','linkedin','text','#');
+    $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_instagram','instagram','text','#');
+    $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_google','google','text','#');
+    $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_twitter','twitter','text','#');
+    $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_facebook','facebook','text','#');
  }
+
+function AddControl($wp_customize,$name,$label,$type,$default)
+{
+    //---------------------------------------------------------------------------------
+    $wp_customize->add_setting(
+        $name,
+        array(
+            'default'           => $default,
+            'type'              => 'theme_mod',
+            'sanitize_callback' => 'sanitize_text_field',
+            'capability'        => 'edit_theme_options',
+        )
+    );
+
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            $name,
+            array(
+                'label'       => __( $label, 'mj_bulupay' ),
+                'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'mj_bulupay' ),
+                'section'     => 'understrap_theme_layout_options',
+                'type'        => $type,
+                'priority'    => 30,
+            )
+        )
+    );
+
+    return $wp_customize;
+ }
+
  add_action( 'customize_register', 'mj_bulupay_customize_register' );
 
 

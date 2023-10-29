@@ -25,23 +25,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     <!-- Right -->
     <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
+      <a href="<?php echo get_theme_mod( 'mj_bulupay_site_footer_facebook' ) ?>" class="me-4 text-reset">
+        <i class="fa fa-facebook-f"></i>
       </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
+      <a href="<?php echo get_theme_mod( 'mj_bulupay_site_footer_twitter' ) ?>" class="me-4 text-reset">
+        <i class="fa fa-twitter"></i>
       </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
+      <a href="<?php echo get_theme_mod( 'mj_bulupay_site_footer_google' ) ?>" class="me-4 text-reset">
+        <i class="fa fa-google"></i>
       </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
+      <a href="<?php echo get_theme_mod( 'mj_bulupay_site_footer_instagram' ) ?>" class="me-4 text-reset">
+        <i class="fa fa-instagram"></i>
       </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
+      <a href="<?php echo get_theme_mod( 'mj_bulupay_site_footer_linkedin' ) ?>" class="me-4 text-reset">
+        <i class="fa fa-linkedin"></i>
       </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
+      <a href="<?php echo get_theme_mod( 'mj_bulupay_site_footer_youtube' ) ?>" class="me-4 text-reset">
+        <i class="fa fa-youtube"></i>
       </a>
     </div>
     <!-- Right -->
@@ -57,7 +57,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i> <?php echo get_theme_mod( 'mj_bulupay_site_footer_website_title' ) ?>
+            <i class="fa fa-gem me-3"></i> <?php echo get_theme_mod( 'mj_bulupay_site_footer_website_title' ) ?>
           </h6>
           <p>
            <?php mj_bulupay_add_site_info() ?>
@@ -126,13 +126,20 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p><i class="fa fa-home me-3"></i>
+
+              <?php echo get_theme_mod( 'mj_bulupay_site_footer_address' ) ?></p>
           <p>
-            <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            <i class="fa fa-envelope me-3"></i>
+              <?php echo get_theme_mod( 'mj_bulupay_site_footer_email' ) ?>
           </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+
+            <?php
+
+            $nex= get_theme_mod( 'mj_bulupay_site_footer_tel1' );
+            ?>
+          <p><i class="fa fa-phone me-3"></i> <?php echo get_theme_mod( 'mj_bulupay_site_footer_tel1' ) ?></p>
+          <p><i class="fa fa-print me-3"></i><?php echo get_theme_mod( 'mj_bulupay_site_footer_tel2' ) ?></p>
         </div>
         <!-- Grid column -->
       </div>
