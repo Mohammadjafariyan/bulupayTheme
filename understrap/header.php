@@ -25,8 +25,8 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<?php if (!is_front_page() && !is_home()) : ?>
 
 		<style>
-			.custom-logo-link img{
-				width:50px
+			#wrapper-navbar .custom-logo-link img{
+				width:100px
 			}
 		</style>
 
