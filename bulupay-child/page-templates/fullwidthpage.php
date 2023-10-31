@@ -23,7 +23,7 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 }
 ?>
 
-<div class="wrapper" id="<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?>">
+<div class="wrapper" style="padding: 0px" id="<?php echo $wrapper_id; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- ok. ?>">
 
 	<div  id="content">
 
