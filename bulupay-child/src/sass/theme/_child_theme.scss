@@ -15,6 +15,15 @@
         color: black;
     }
   }
-  
+
+
+@font-face {
+  font-family: 'IranianSans';
+  src: url('#{$fa-font-path}/IranianSans.ttf?v=#{$fa-version}') format('truetype');
+  //  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
    
   

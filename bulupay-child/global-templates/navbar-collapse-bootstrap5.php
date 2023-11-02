@@ -17,6 +17,11 @@ $container = get_theme_mod( 'understrap_container_type' );
         background: rgb(0,212,255);
         background: linear-gradient(90deg, rgba(0,212,255,1) 19%, rgba(9,9,121,1) 61%, rgba(2,0,36,1) 89%);
     }
+
+   h1,h2,h3,h4,h5,h6 , p , ol , a , button{
+        direction: rtl;
+       font-family: IranianSans;
+    }
 </style>
 <nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-gradient-primary" aria-labelledby="main-nav-label">
 

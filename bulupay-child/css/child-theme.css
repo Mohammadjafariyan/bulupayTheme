@@ -14977,6 +14977,12 @@ figure.woocommerce-product-gallery__wrapper {
     color: black;
   }
 }
+@font-face {
+  font-family: "IranianSans";
+  src: url("../fonts/IranianSans.ttf?v=4.7.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
