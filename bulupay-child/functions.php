@@ -264,6 +264,7 @@ function mj_bulupay_customize_register( $wp_customize ) {
     $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_google','google','text','#');
     $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_twitter','twitter','text','#');
     $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_facebook','facebook','text','#');
+    $wp_customize=AddControl($wp_customize,'mj_bulupay_site_footer_social_text','social text','textarea','Get connected with us on social networks:');
  }
 
 function AddControl($wp_customize,$name,$label,$type,$default)

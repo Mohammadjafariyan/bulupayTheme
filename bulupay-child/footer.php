@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
+      <span><?php echo get_theme_mod( 'mj_bulupay_site_footer_social_text' ) ?> </span>
     </div>
     <!-- Left -->
 
