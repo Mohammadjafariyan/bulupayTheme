@@ -30,6 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</h2>
 
 
+
 	<div class="<?php echo esc_attr( $container ); ?>">
 
 		<!-- Your site branding in the menu -->
@@ -48,20 +49,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</button>
 
 		<!-- The WordPress Menu goes here -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav ms-auto',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+       <div class="row d-flex flex-column">
+           <h1 class="text-white"><?php bloginfo( 'name' ); ?></h1>
+           <?php
+           wp_nav_menu(
+               array(
+                   'theme_location'  => 'primary',
+                   'container_class' => 'collapse navbar-collapse',
+                   'container_id'    => 'navbarNavDropdown',
+                   'menu_class'      => 'navbar-nav ms-auto',
+                   'fallback_cb'     => '',
+                   'menu_id'         => 'main-menu',
+                   'depth'           => 2,
+                   'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+               )
+           );
+           ?>
+       </div>
 
 	</div><!-- .container(-fluid) -->
 
