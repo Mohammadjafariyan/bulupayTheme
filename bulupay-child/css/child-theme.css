@@ -14983,6 +14983,18 @@ figure.woocommerce-product-gallery__wrapper {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "BYekan";
+  src: url("../fonts/BYekan.ttf?v=4.7.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "iranyekanwebregular";
+  src: url("../fonts/iranyekanwebregular.eot?v=4.7.0") format("embedded-opentype"), url("../fonts/iranyekanwebregular.woff2?v=4.7.0") format("woff2"), url("../fonts/iranyekanwebregular.woff?v=4.7.0") format("woff"), url("../fonts/iranyekanwebregular.ttf?v=4.7.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

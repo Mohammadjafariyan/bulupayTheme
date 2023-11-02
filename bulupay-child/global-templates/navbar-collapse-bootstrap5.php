@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
    h1,h2,h3,h4,h5,h6 , p , ol , a , button{
         direction: rtl;
-       font-family: IranianSans;
+       font-family: iranyekanwebregular;
     }
 </style>
 <nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-gradient-primary" aria-labelledby="main-nav-label">
