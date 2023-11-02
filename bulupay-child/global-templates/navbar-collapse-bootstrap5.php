@@ -12,7 +12,13 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
+<style>
+    .bg-gradient-primary{
+        background: rgb(0,212,255);
+        background: linear-gradient(90deg, rgba(0,212,255,1) 19%, rgba(9,9,121,1) 61%, rgba(2,0,36,1) 89%);
+    }
+</style>
+<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-gradient-primary" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
